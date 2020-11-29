@@ -1,0 +1,20 @@
+//----------------------------- 尺寸 -----------------------------
+$SIDEBARW: 200px;
+
+
+//----------------------------- RWD 斷點 -----------------------------
+$XL-MEDIA: 1200px;
+$LG-MEDIA: 992px;
+$MD-MEDIA: 768px;
+$SM-MEDIA: 576px;
+
+//----------------------------- 顏色 -----------------------------
+$COLOR-DarkBlue: #282b30;
+$COLOR-WHITE: #FFF;
+
+
+:root {
+  --COLOR-WHITE: #{$COLOR-WHITE};
+  --BODY-BG: #{$COLOR-DarkBlue};
+  --SIDEBARW: #{$SIDEBARW};
+}
