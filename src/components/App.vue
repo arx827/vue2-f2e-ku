@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ 'sidebar-collapse': sidebarClose }">
     <router-view></router-view>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -53,8 +53,28 @@
     </div> -->
   </div>
 </template>
+<script>
+import { mapState } from "vuex";
+export default {
+  name: "DashHeader",
+  computed: {
+    ...mapState(["sidebarClose"])
+  },
+  methods: {
+    // sidebarCollapse() {
+    //   let Body = document.body;
+    //   let BodyHasClass = Array.from(Body.classList).indexOf("sidebar-collapse");
+    //   console.log(BodyHasClass);
+    //   BodyHasClass === -1
+    //     ? Body.classList.add("sidebar-collapse")
+    //     : Body.classList.remove("sidebar-collapse");
+    // }
+  }
+};
+</script>
 
 <style lang="scss">
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "@/assets/scss/all.scss";
 #app {

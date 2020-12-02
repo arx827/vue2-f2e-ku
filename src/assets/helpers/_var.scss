@@ -12,9 +12,5 @@ $SM-MEDIA: 576px;
 $COLOR-DarkBlue: #282b30;
 $COLOR-WHITE: #FFF;
 
-
-:root {
-  --COLOR-WHITE: #{$COLOR-WHITE};
-  --BODY-BG: #{$COLOR-DarkBlue};
-  --SIDEBARW: #{$SIDEBARW};
-}
+$COLOR-MAIN: #3c8dbc;
+$COLOR-MAIN-DARK15: darken($COLOR-MAIN, 8);

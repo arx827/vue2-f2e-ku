@@ -1,0 +1,11 @@
+//----------------------------- 顏色 -----------------------------
+$COLOR-DarkBlue: #282b30;
+$COLOR-WHITE: #FFF;
+
+$COLOR-MAIN: #3cbc8f;
+$COLOR-MAIN-DARK15: darken($COLOR-MAIN, 15);
+
+:root {
+  --COLOR-MAIN: #{$COLOR-MAIN};
+  --COLOR-MAIN-D30: #{$COLOR-MAIN-DARK15};
+}
