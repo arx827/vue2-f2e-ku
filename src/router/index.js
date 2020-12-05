@@ -2,7 +2,7 @@ import DashView from "@/components/Dash.vue";
 import NotFoundView from "@/components/404.vue";
 
 // Import Views - Dash
-import DashboardView from "@/components/views/Dashboard.vue";
+import Links from "@/components/views/Links.vue";
 
 const routes = [
   {
@@ -10,11 +10,23 @@ const routes = [
     component: DashView,
     children: [
       {
-        path: "dashboard",
+        path: "links",
         alias: "",
-        component: DashboardView,
-        name: "Dashboard",
-        meta: { description: "Overview of environment" }
+        component: Links,
+        name: "Links",
+        meta: {
+          description: "蒐錄各種連結",
+          showname: "連結",
+          breadcrumb: [
+            {
+              name: "首頁",
+              link: "/"
+            },
+            {
+              name: "連結"
+            }
+          ]
+        }
         // }, {
         //   path: 'tables',
         //   component: TablesView,
