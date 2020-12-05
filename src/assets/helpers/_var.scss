@@ -1,5 +1,9 @@
 //----------------------------- 尺寸 -----------------------------
-$SIDEBARW: 200px;
+$SIDEBAROPENW: 230px;
+$SIDEBARCLOSEW: 50px;
+
+$HEADERH: 50px;
+$FOOTERH: 50px;
 
 
 //----------------------------- RWD 斷點 -----------------------------
@@ -9,8 +13,16 @@ $MD-MEDIA: 768px;
 $SM-MEDIA: 576px;
 
 //----------------------------- 顏色 -----------------------------
-$COLOR-DarkBlue: #282b30;
+$COLOR-Dark: #282b30;
 $COLOR-WHITE: #FFF;
 
 $COLOR-MAIN: #3c8dbc;
-$COLOR-MAIN-DARK15: darken($COLOR-MAIN, 8);
+
+$SIDEBAR-BG: #222d32;
+$SIDEBAR-MENU-HEADER-TXT: #4b646f;
+$SIDEBAR-MENU-HEADER-BG: #1a2226;
+$SIDEBAR-MENU-LINK-TXT: #b8c7ce;
+$SIDEBAR-MENU-HOVER-BG: #1e282c;
+
+$FOOTER-TXT: #444;
+$FOOTER-BORDER: #d2d6de;

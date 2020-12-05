@@ -1,5 +1,11 @@
 <template>
-  <div id="app" :class="{ 'sidebar-collapse': sidebarClose }">
+  <div
+    id="app"
+    :class="{
+      'sidebar-pc-close': sidebarPcClose,
+      'sidebar-mb-close': sidebarmbClose
+    }"
+  >
     <router-view></router-view>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -58,7 +64,7 @@ import { mapState } from "vuex";
 export default {
   name: "DashHeader",
   computed: {
-    ...mapState(["sidebarClose"])
+    ...mapState(["sidebarPcClose", "sidebarmbClose"])
   },
   methods: {
     // sidebarCollapse() {
@@ -74,7 +80,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "@/assets/scss/all.scss";
 #app {
@@ -118,8 +123,6 @@ export default {
   &__wrapper {
     overflow: auto;
     height: 100%;
-  }
-  &__view {
   }
   &__link {
     display: block;

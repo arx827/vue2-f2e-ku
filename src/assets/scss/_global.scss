@@ -1,10 +1,36 @@
 :root {
   --COLOR-WHITE: #{$COLOR-WHITE};
-  --BODY-BG: #{$COLOR-DarkBlue};
-  --SIDEBARW: #{$SIDEBARW};
+  --BODY-BG: #{$COLOR-Dark};
+
+  --SIDEBAROPENW: #{$SIDEBAROPENW};
+  --SIDEBARCLOSEW: #{$SIDEBARCLOSEW};
+
+  --HEADERH: #{$HEADERH};
+  --FOOTERH: #{$FOOTERH};
 
   --COLOR-MAIN: #{$COLOR-MAIN};
-  --COLOR-MAIN-D30: #{$COLOR-MAIN-DARK15};
+  /**
+  * 主色漸黑
+  */
+  @for $i from 1 through 10 {
+    #{'--COLOR-MAIN-D' + ($i * 5)} : darken($COLOR-MAIN, ($i * 5));
+  }
+  /**
+  * 主色漸亮
+  */
+  @for $i from 1 through 10 {
+    #{'--COLOR-MAIN-L' + ($i * 5)} : lighten($COLOR-MAIN, ($i * 5));
+  }
+
+  --SIDEBAR-BG: #{$SIDEBAR-BG};
+  --SIDEBAR-MENU-HEADER-BG: #{$SIDEBAR-MENU-HEADER-BG};
+  --SIDEBAR-MENU-HEADER-TXT: #{$SIDEBAR-MENU-HEADER-TXT};
+  --SIDEBAR-MENU-LINK-TXT: #{$SIDEBAR-MENU-LINK-TXT};
+  --SIDEBAR-MENU-HOVER-BG: #{$SIDEBAR-MENU-HOVER-BG};
+
+  --FOOTER-BG: var(--COLOR-WHITE);
+  --FOOTER-TXT: #{$FOOTER-TXT};
+  --FOOTER-BORDER: #{$FOOTER-BORDER};
 }
 
 html, body {

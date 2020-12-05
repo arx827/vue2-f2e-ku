@@ -18,7 +18,21 @@
 
       <div class="navbar__custom-menu">
         <ul class="navbar__nav d-flex align-items-stretch">
-          <li>
+          <li class="d-flex align-items-stretch">
+            <a
+              class="navbar__anchor navbar__search"
+              @click="searchCollapse = !searchCollapse"
+            >
+              <font-awesome-icon icon="search" class="navbar__searchIcon" />
+            </a>
+            <input
+              class="navbar__search__input"
+              type="text"
+              placeholder="Search"
+              :class="{ show: searchCollapse }"
+            />
+          </li>
+          <li class="d-flex align-items-stretch">
             <a
               class="navbar__anchor navbar__anchor__user d-flex align-items-center"
             >
@@ -39,6 +53,11 @@
 import { mapActions } from "vuex";
 export default {
   name: "DashHeader",
+  data() {
+    return {
+      searchCollapse: false
+    };
+  },
   methods: {
     ...mapActions(["sidebarCollapse"])
   }
@@ -49,24 +68,24 @@ export default {
 .main-header {
   position: relative;
   max-height: 100px;
-  z-index: 10;
+  z-index: 100;
   &__logo {
     position: relative;
     display: block;
-    background: var(--COLOR-MAIN-D30);
+    background: var(--COLOR-MAIN-D5);
     color: var(--COLOR-WHITE);
     width: 100%;
-    line-height: 50px;
+    line-height: var(--HEADERH);
     transition: width 0.3s ease-in-out;
     @include sm-media {
       position: absolute;
-      width: 230px;
+      width: var(--SIDEBAROPENW);
     }
     &-img {
       font-weight: 300;
       font-size: 20px;
       text-align: center;
-      height: 50px;
+      height: var(--HEADERH);
       padding: 0.4em;
       margin-right: auto;
       margin-left: auto;
@@ -77,24 +96,23 @@ export default {
 .navbar {
   background: var(--COLOR-MAIN);
   width: 100%;
-  min-height: 50px;
+  min-height: var(--HEADERH);
   margin-left: 0;
   transition: margin-left 0.3s ease-in-out;
   padding: 0;
   @include sm-media {
     width: auto;
     flex: 1;
-    margin-left: 230px;
+    margin-left: var(--SIDEBAROPENW);
   }
   &__anchor {
     padding-right: 15px;
     padding-left: 15px;
-    height: 100%;
     display: block;
     color: var(--COLOR-WHITE);
     cursor: pointer;
     &:hover {
-      background: var(--COLOR-MAIN-D30);
+      background: var(--COLOR-MAIN-D5);
       color: var(--COLOR-WHITE);
     }
     &__user {
@@ -103,37 +121,39 @@ export default {
       &-img {
         width: 40px;
         height: 40px;
+        border-radius: 5px;
       }
     }
   }
-  &__bars {
+  &__bars,
+  &__search {
     &Icon {
       font-size: 12px;
       vertical-align: middle;
       height: 100%;
     }
   }
-  &__custom-menu {
-    // padding: 5px;
-  }
   &__nav {
     margin: 0 5px;
     height: 100%;
   }
-}
-
-// sidebar折疊
-.sidebar-collapse {
-  .main-header {
-    &__logo {
-      @include sm-media {
-        width: 50px;
+  &__search {
+    &__input {
+      margin: 5px 0;
+      padding: 5px 0 0;
+      border: 0;
+      width: 0;
+      background: transparent;
+      border-bottom: 1px solid var(--COLOR-MAIN-D10);
+      color: var(--COLOR-MAIN-L30);
+      transition: all 0.2s;
+      &::placeholder {
+        color: var(--COLOR-MAIN-D10);
       }
-    }
-  }
-  .navbar {
-    @include sm-media {
-      margin-left: 50px;
+      &.show {
+        margin: 5px;
+        width: 210px;
+      }
     }
   }
 }
