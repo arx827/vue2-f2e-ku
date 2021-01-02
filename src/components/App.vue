@@ -61,11 +61,23 @@
 </template>
 <script>
 import { mapState } from "vuex";
+var _extends =
+  Object.assign ||
+  function(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+
 export default {
   name: "DashHeader",
-  computed: {
-    ...mapState(["sidebarPcClose", "sidebarmbClose"])
-  },
+  computed: _extends({}, mapState(["sidebarPcClose", "sidebarmbClose"])),
   methods: {
     // sidebarCollapse() {
     //   let Body = document.body;
@@ -75,9 +87,9 @@ export default {
     //     ? Body.classList.add("sidebar-collapse")
     //     : Body.classList.remove("sidebar-collapse");
     // }
+    a() {}
   }
-};
-</script>
+};</script>
 
 <style lang="scss">
 @import "~bootstrap/dist/css/bootstrap.min.css";

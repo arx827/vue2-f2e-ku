@@ -5,6 +5,34 @@
       <font-awesome-icon icon="link" class="menu__linkIcon" />
       <span class="menu__linkTxt">連結</span>
     </li>
+    <li class="menu__link">
+      <font-awesome-icon icon="link" class="menu__linkIcon" />
+      <span class="menu__linkTxt">文章</span>
+    </li>
+    <li class="menu__link">
+      <font-awesome-icon icon="link" class="menu__linkIcon" />
+      <span class="menu__linkTxt">工具</span>
+    </li>
+    <li class="menu__link">
+      <font-awesome-icon icon="link" class="menu__linkIcon" />
+      <span class="menu__linkTxt">會員中心</span>
+    </li>
+    <li class="menu__link">
+      <font-awesome-icon icon="link" class="menu__linkIcon" />
+      <span class="menu__linkTxt">我的收藏</span>
+    </li>
+    <li class="menu__link">
+      <font-awesome-icon icon="link" class="menu__linkIcon" />
+      <span class="menu__linkTxt">新增文章</span>
+    </li>
+    <li class="menu__link">
+      <font-awesome-icon icon="link" class="menu__linkIcon" />
+      <span class="menu__linkTxt">新增工具</span>
+    </li>
+    <li class="menu__link">
+      <font-awesome-icon icon="link" class="menu__linkIcon" />
+      <span class="menu__linkTxt">新增連結</span>
+    </li>
   </ul>
 </template>
 

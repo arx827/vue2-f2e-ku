@@ -1,8 +1,6 @@
 const path = require("path");
-function resolve(dir) {
-  return path.join(__dirname, dir);
-}
-const name = require("./package.json").name;
+const resolve = dir => path.join(__dirname, dir);
+// const name = require("./package.json").name;
 
 module.exports = {
   publicPath:
@@ -64,6 +62,13 @@ module.exports = {
     // }
   },
   chainWebpack: config => {
+    config.resolve.alias
+      .set("@", resolve("src"))
+      .set("@assets", resolve("src/assets"))
+      .set("@components", resolve("src/components"))
+      .set("@layout", resolve("src/components/layout"))
+      .set("@views", resolve("src/components/views"))
+      .set("@static", resolve("src/static"));
     config.module.rule("eslint").use("eslint-loader");
   }
 };

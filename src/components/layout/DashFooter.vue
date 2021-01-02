@@ -8,13 +8,12 @@
 <script>
 export default {
   name: "DashFooter",
-  data: function() {
+  data: function () {
     return {
       year: new Date().getFullYear()
     };
   }
-};
-</script>
+};</script>
 
 <style lang="scss">
 .main-footer {

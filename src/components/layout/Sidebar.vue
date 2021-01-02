@@ -25,8 +25,7 @@ export default {
   components: {
     SidebarMenu
   }
-};
-</script>
+};</script>
 
 <style scoped lang="scss">
 .main-sidebar {

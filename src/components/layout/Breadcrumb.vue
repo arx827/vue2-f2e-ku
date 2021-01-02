@@ -8,7 +8,7 @@
         @click="routeTo(idx)"
         :class="{ breadcrumb__link: !!breadcrumb.link }"
       >
-        {{ breadcrumb.name }}
+        <span class="breadcrumb__anchor">{{ breadcrumb.name }}</span>
       </li>
     </ul>
   </div>
@@ -32,15 +32,13 @@ export default {
   },
   methods: {
     routeTo(pRouteTo) {
-      if (this.breadcrumbList[pRouteTo].link)
-        this.$router.push(this.breadcrumbList[pRouteTo].link);
+      if (this.breadcrumbList[pRouteTo].link) this.$router.push(this.breadcrumbList[pRouteTo].link);
     },
     updateList() {
       this.breadcrumbList = this.$route.meta.breadcrumb;
     }
   }
-};
-</script>
+};</script>
 
 <style scoped lang="scss">
 .breadcrumb {
@@ -72,6 +70,13 @@ export default {
   }
   &__link {
     color: var(--COLOR-MAIN);
+    @include sm-media {
+      &:hover {
+        .breadcrumb__anchor {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 </style>

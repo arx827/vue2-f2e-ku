@@ -3,7 +3,7 @@
     id="notFound"
     class="d-flex flex-column justify-content-center align-items-center"
   >
-    <img src="../assets/images/logo.png" class="logo" />
+    <img src="~@assets/images/logo.png" class="logo" />
     <div class="text-center">
       <h1>You are lost.</h1>
       <h4>This page doesn't exist.</h4>

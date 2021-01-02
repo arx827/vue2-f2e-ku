@@ -1,5 +1,6 @@
 :root {
   --COLOR-WHITE: #{$COLOR-WHITE};
+  --COLOR-GRAY: #{$COLOR-GRAY};
   --BODY-BG: #{$COLOR-Dark};
 
   --SIDEBAROPENW: #{$SIDEBAROPENW};
@@ -15,11 +16,23 @@
   @for $i from 1 through 10 {
     #{'--COLOR-MAIN-D' + ($i * 5)} : darken($COLOR-MAIN, ($i * 5));
   }
+  @for $i from 1 through 10 {
+    #{'--COLOR-MAIN2-D' + ($i * 5)} : darken($COLOR-MAIN2, ($i * 5));
+  }
+  @for $i from 1 through 10 {
+    #{'--COLOR-GRAY-D' + ($i * 5)} : darken($COLOR-GRAY, ($i * 5));
+  }
   /**
   * 主色漸亮
   */
   @for $i from 1 through 10 {
     #{'--COLOR-MAIN-L' + ($i * 5)} : lighten($COLOR-MAIN, ($i * 5));
+  }
+  @for $i from 1 through 10 {
+    #{'--COLOR-MAIN2-L' + ($i * 5)} : lighten($COLOR-MAIN2, ($i * 5));
+  }
+  @for $i from 1 through 10 {
+    #{'--COLOR-GRAY-L' + ($i * 5)} : lighten($COLOR-GRAY, ($i * 5));
   }
 
   --SIDEBAR-BG: #{$SIDEBAR-BG};
@@ -31,6 +44,10 @@
   --FOOTER-BG: var(--COLOR-WHITE);
   --FOOTER-TXT: #{$FOOTER-TXT};
   --FOOTER-BORDER: #{$FOOTER-BORDER};
+
+  --CONTENT-BG: #{$CONTENT-BG};
+
+  --BTN-BORDER: #{$BTN-BORDER};
 }
 
 html, body {

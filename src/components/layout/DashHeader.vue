@@ -3,7 +3,7 @@
     <a class="main-header__logo" href="/">
       <img
         class="main-header__logo-img"
-        src="../../assets/images/copilot-logo-white.svg"
+        src="~@assets/images/copilot-logo-white.svg"
         alt="Logo"
       />
     </a>
@@ -51,6 +51,20 @@
 
 <script>
 import { mapActions } from "vuex";
+var _extends =
+  Object.assign ||
+  function(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+
 export default {
   name: "DashHeader",
   data() {
@@ -58,9 +72,7 @@ export default {
       searchCollapse: false
     };
   },
-  methods: {
-    ...mapActions(["sidebarCollapse"])
-  }
+  methods: _extends({}, mapActions(["sidebarCollapse"]))
 };
 </script>
 

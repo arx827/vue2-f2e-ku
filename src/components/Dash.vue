@@ -10,9 +10,7 @@
         </h1>
         <Breadcrumb />
       </section>
-      <section class="main-content">
-        <router-view></router-view>
-      </section>
+      <router-view />
     </div>
     <Dash-footer />
   </div>
@@ -31,12 +29,11 @@ export default {
     DashFooter,
     Breadcrumb
   }
-};
-</script>
+};</script>
 
 <style lang="scss">
 .content-wrapper {
-  background-color: var(--COLOR-MAIN-L45);
+  background-color: var(--CONTENT-BG);
   min-height: calc(100vh - var(--HEADERH) * 2 - var(--FOOTERH));
   margin-left: 0;
   transform: translate(var(--SIDEBAROPENW), 0);
